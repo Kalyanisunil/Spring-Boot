@@ -12,7 +12,10 @@ public class DemoController {
     private Coach myCoach;
 
     @Autowired
+    //bean name should have the first letter lowercased
+    //CricketCoach-> bean name =cricketCoach
     public DemoController(@Qualifier("cricketCoach") Coach theCoach) {
+
         myCoach = theCoach;
     }
 
