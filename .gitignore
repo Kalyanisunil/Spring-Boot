@@ -1,0 +1,20 @@
+# Sensitive Spring Boot config (ignore real secrets)
+/src/main/resources/application.properties
+/src/main/resources/application.yml
+!src/main/resources/application-example.properties
+
+# Build folders
+/target/
+/build/
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+.project
+.settings/
+
+# OS and logs
+.DS_Store
+Thumbs.db
+*.log
