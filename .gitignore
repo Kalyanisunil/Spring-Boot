@@ -1,5 +1,7 @@
 # Sensitive Spring Boot config (ignore real secrets)
-/src/main/resources/application.properties
+# Ignore every application.properties anywhere
+**/application.properties
+
 /src/main/resources/application.yml
 !src/main/resources/application-example.properties
 
