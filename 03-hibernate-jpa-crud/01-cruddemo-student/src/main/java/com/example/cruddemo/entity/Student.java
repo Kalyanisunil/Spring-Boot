@@ -3,30 +3,43 @@ package com.example.cruddemo.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "student")
+@Table(name="student")
 public class Student {
 
+    // define fields
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    @Column(name="id")
+    private int id;
+
+    @Column(name="first_name")
     private String firstName;
+
+    @Column(name="last_name")
     private String lastName;
+
+    @Column(name="email")
     private String email;
 
+    // define constructors
+    public Student() {
 
-    public Student(String firstName, String lastName,String email) {
+    }
+
+    public Student(String firstName, String lastName, String email) {
         this.firstName = firstName;
-        this.lastName=lastName;
-        this.email=email;
-
+        this.lastName = lastName;
+        this.email = email;
     }
 
-    public void setId(String id) {
+    // define getters/setters
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
         this.id = id;
-    }
-
-    public String getId() {
-       return id;
     }
 
     public String getFirstName() {
@@ -53,10 +66,13 @@ public class Student {
         this.email = email;
     }
 
+
+    // define toString() method
+
     @Override
     public String toString() {
         return "Student{" +
-                "id='" + id + '\'' +
+                "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +
