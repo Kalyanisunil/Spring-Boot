@@ -6,8 +6,8 @@ import jakarta.persistence.*;
 @Table(name="Employee")
 public class Employee {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     @Column(name ="first_name" )
     private String firstName;
@@ -23,13 +23,19 @@ public class Employee {
 
     }
 
-    public Employee(String email, String firstName, Integer id, String lastName) {
+    public Employee(String email, String firstName, int id, String lastName) {
         this.email = email;
         this.firstName = firstName;
         this.id = id;
         this.lastName = lastName;
     }
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getEmail() {
         return email;
     }
