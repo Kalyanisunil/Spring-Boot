@@ -1,19 +1,13 @@
 package com.example.cruddemo.rest;
 
-import com.example.cruddemo.dao.EmployeeDAO;
-import com.example.cruddemo.dao.EmployeeDaoImpl;
 import com.example.cruddemo.entity.Employee;
 import com.example.cruddemo.service.EmployeeService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
-
-import static org.apache.tomcat.jni.SSLConf.apply;
 
 @RestController
 @RequestMapping("/api")
